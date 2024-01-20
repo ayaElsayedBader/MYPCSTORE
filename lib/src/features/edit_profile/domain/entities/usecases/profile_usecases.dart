@@ -1,4 +1,4 @@
-import '../../../register/entities/model/register_model.dart';
+import '../../../../register/domain/entities/model/register_model.dart';
 import '../repository_profile/repository_profile.dart';
 
 class ProfileUseCase {

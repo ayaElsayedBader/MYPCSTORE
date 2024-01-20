@@ -1,7 +1,8 @@
 import '../../../../core/errors/server_failure.dart';
 import '../../../../core/network/network_info_impl.dart';
-import '../../entities/model/register_model.dart';
-import '../../entities/repository_register/repository_register.dart';
+
+import '../../domain/entities/model/register_model.dart';
+import '../../domain/entities/repository_register/repository_register.dart';
 import '../remote_data_register/remote_data_register.dart';
 
 class RepositoryRegisterImp implements RepositoryRegister {

@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 
 import '../../../../core/errors/failure.dart';
-import '../../../register/entities/model/register_model.dart';
+import '../../../register/domain/entities/model/register_model.dart';
 import '../repo/repo.dart';
 
 class UseCaseLogin {

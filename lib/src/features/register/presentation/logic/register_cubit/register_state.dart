@@ -1,5 +1,6 @@
 
-import '../../../entities/model/register_model.dart';
+
+import '../../../domain/entities/model/register_model.dart';
 
 abstract class RegistrationState {}
 

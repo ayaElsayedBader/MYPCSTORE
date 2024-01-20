@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import '../../../../core/api/end_point.dart';
 import '../../../../core/errors/server_failure.dart';
 import '../../../../core/manger/string_app.dart';
-import '../../entities/model/register_model.dart';
+import '../../domain/entities/model/register_model.dart';
 
 abstract class RemoteDataRegister {
   Future<UserModel> addUserRegisterRemote({
@@ -41,7 +41,6 @@ class RemoteDataRegisterImp implements RemoteDataRegister {
         "gender": "female",
         "password": password,
         "token": token,
-        // cash token by shard pref
         "profileImage": userImage
       });
       if (response.statusCode == 200 || response.statusCode == 201) {
@@ -51,7 +50,7 @@ class RemoteDataRegisterImp implements RemoteDataRegister {
 
         var data = response.data;
         var user = UserModel.fromJson(data);
-        return user;
+       return user;
       } else {
         if (kDebugMode) {
           print(

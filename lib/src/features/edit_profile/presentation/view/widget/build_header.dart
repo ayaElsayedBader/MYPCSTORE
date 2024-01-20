@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/manger/image_manger.dart';
 import '../../../../../core/manger/size_app.dart';
-import '../../../../register/entities/model/register_model.dart';
+import '../../../../register/domain/entities/model/register_model.dart';
 
 class BuildHeader extends StatelessWidget {
   const BuildHeader({super.key, required this.userModel});

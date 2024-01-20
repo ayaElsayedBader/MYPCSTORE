@@ -3,8 +3,8 @@ import 'package:pc/src/features/drawer_home_lap/presentation/view/widget_drawer_
 import 'package:pc/src/features/drawer_home_lap/presentation/view/widget_drawer_home_lap/row_image_email_phone_profile.dart';
 
 import '../../../../../core/manger/size_app.dart';
+import '../../../../register/domain/entities/model/register_model.dart';
 
-import '../../../../register/entities/model/register_model.dart';
 
 class BuildProfileWidget extends StatelessWidget {
   const BuildProfileWidget({super.key, required this.userModel});

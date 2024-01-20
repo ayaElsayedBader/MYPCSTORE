@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
 
-import '../../../entities/usecases/profile_usecases.dart';
-import '../../../entities/usecases/update_usecases.dart';
+
+import '../../../domain/entities/usecases/profile_usecases.dart';
+import '../../../domain/entities/usecases/update_usecases.dart';
 import 'edit_profile_state.dart';
 
 class ProfileCubit extends Cubit<ProfileState> {

@@ -1,10 +1,10 @@
 import '../model/register_model.dart';
 import '../repository_register/repository_register.dart';
 
-class AddUserRegister {
+class AddUserRegisterUseCase {
   final RepositoryRegister repositoryRegister;
 
-  AddUserRegister({required this.repositoryRegister});
+  AddUserRegisterUseCase({required this.repositoryRegister});
 
   Future<UserModel> addUserRegister(
       {required name,

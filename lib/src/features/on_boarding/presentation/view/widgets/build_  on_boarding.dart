@@ -14,7 +14,7 @@ class BuildOnBoardingApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // backgroundColor: Colors.black,
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: SizeApp.size30),
       child: Column(

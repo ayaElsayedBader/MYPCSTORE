@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/manger/size_app.dart';
 import '../../../../../core/manger/text_style.dart';
-import '../../../../register/entities/model/register_model.dart';
+import '../../../../register/domain/entities/model/register_model.dart';
 import 'image_profile_drawer.dart';
 
 class RowImageEmailPhoneProfile extends StatelessWidget {

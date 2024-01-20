@@ -6,13 +6,13 @@ import 'package:image_picker/image_picker.dart';
 import 'package:pc/src/features/register/presentation/logic/register_cubit/register_state.dart';
 
 import '../../../../../core/helper/cache_helper.dart';
-import '../../../entities/usecases/add_user_register_usecases.dart';
+import '../../../domain/entities/usecases/add_user_register_usecases.dart';
 
 class RegisterCubit extends Cubit<RegistrationState> {
   RegisterCubit({required this.addUserRegister}) : super(RegistrationInitial());
 
   static RegisterCubit get(context) => BlocProvider.of(context);
-  final AddUserRegister addUserRegister;
+  final AddUserRegisterUseCase addUserRegister;
 
   user({
     required name,
@@ -33,12 +33,10 @@ class RegisterCubit extends Cubit<RegistrationState> {
           userImage: userImage,
           token: token);
 
-      // save token by shard pref UpData token by server
       CacheHelper.saveData(key: "newToken", value: repo.user?.token);
 
       emit(RegistrationSuccess(repo));
 
-      //   CacheHelper.saveData(key: "token", value: userm);
       if (kDebugMode) {
         print(repo.user!.name);
 

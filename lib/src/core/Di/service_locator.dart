@@ -8,8 +8,9 @@ import '../../features/cart/domain/usecases/updata_usecases.dart';
 import '../../features/cart/presentation/logic/cart_cubit/cart_cubit.dart';
 import '../../features/edit_profile/data/remote_data_source/profile_remote_data.dart';
 import '../../features/edit_profile/data/repository_profile_imp/repository_profile_imp.dart';
-import '../../features/edit_profile/entities/usecases/profile_usecases.dart';
-import '../../features/edit_profile/entities/usecases/update_usecases.dart';
+import '../../features/edit_profile/domain/entities/usecases/profile_usecases.dart';
+import '../../features/edit_profile/domain/entities/usecases/update_usecases.dart';
+
 import '../../features/edit_profile/presentation/logic/edit_ profile_cubit/edit_profile_cubit.dart';
 import '../../features/home_lap/data/remote _data _source.dart';
 import '../../features/home_lap/data/repository_imp.dart';
@@ -21,7 +22,7 @@ import '../../features/login/domain/usecases_login/usecases_login.dart';
 import '../../features/login/presentation/logic/login_cubit/login_cubit.dart';
 import '../../features/register/data/remote_data_register/remote_data_register.dart';
 import '../../features/register/data/repoistory_register_imp/repoistory_register_imp.dart';
-import '../../features/register/entities/usecases/add_user_register_usecases.dart';
+import '../../features/register/domain/entities/usecases/add_user_register_usecases.dart';
 import '../../features/register/presentation/logic/register_cubit/register_cubit.dart';
 import '../network/network_info_impl.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
@@ -35,7 +36,7 @@ Future<void> initServiceLocator() async {
   serviceLocator.registerLazySingleton(
       () => LoginCubit(useCaseLogin: serviceLocator.get<UseCaseLogin>()));
   serviceLocator.registerLazySingleton(() =>
-      RegisterCubit(addUserRegister: serviceLocator.get<AddUserRegister>()));
+      RegisterCubit(addUserRegister: serviceLocator.get<AddUserRegisterUseCase>()));
   serviceLocator.registerLazySingleton(() => ProfileCubit(
         profileUseCase: serviceLocator.get<ProfileUseCase>(),
         upDataUseCase: serviceLocator.get<UpDataUseCase>(),
@@ -62,7 +63,7 @@ Future<void> initServiceLocator() async {
       repositoryProFile: serviceLocator.get<RepositoryProfileImp>()));
   serviceLocator.registerLazySingleton(
       () => UseCaseLogin(repo: serviceLocator.get<RepoLoginImp>()));
-  serviceLocator.registerLazySingleton(() => AddUserRegister(
+  serviceLocator.registerLazySingleton(() => AddUserRegisterUseCase(
       repositoryRegister: serviceLocator.get<RepositoryRegisterImp>()));
   // fore repo
   serviceLocator.registerLazySingleton(() => RepoLoginImp(

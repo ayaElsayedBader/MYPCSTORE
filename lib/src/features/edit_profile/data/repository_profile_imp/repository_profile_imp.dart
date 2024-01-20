@@ -1,7 +1,7 @@
 import '../../../../core/errors/server_failure.dart';
 import '../../../../core/network/network_info_impl.dart';
-import '../../../register/entities/model/register_model.dart';
-import '../../entities/repository_profile/repository_profile.dart';
+import '../../../register/domain/entities/model/register_model.dart';
+import '../../domain/entities/repository_profile/repository_profile.dart';
 import '../remote_data_source/profile_remote_data.dart';
 
 class RepositoryProfileImp implements RepositoryProfile {

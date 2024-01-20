@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:pc/src/core/extension/extension.dart';
 
 import '../../features/edit_profile/presentation/view/screen/edit_profile_screen.dart';
-import '../../features/register/entities/model/register_model.dart';
+import '../../features/register/domain/entities/model/register_model.dart';
 import '../manger/size_app.dart';
 import 'loading_widget.dart';
 

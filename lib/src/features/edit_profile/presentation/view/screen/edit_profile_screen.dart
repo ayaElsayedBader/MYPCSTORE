@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/manger/size_app.dart';
 import '../../../../../core/manger/string_app.dart';
-import '../../../../register/entities/model/register_model.dart';
+import '../../../../register/domain/entities/model/register_model.dart';
 import '../../logic/edit_ profile_cubit/edit_profile_cubit.dart';
 import '../../logic/edit_ profile_cubit/edit_profile_state.dart';
 import '../widget/build_edit_details _profile.dart';

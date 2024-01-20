@@ -6,7 +6,7 @@ import '../../../../core/errors/failure.dart';
 import '../../../../core/errors/server_failure.dart';
 import '../../../../core/manger/string_app.dart';
 import '../../../../core/network/network_info_impl.dart';
-import '../../../register/entities/model/register_model.dart';
+import '../../../register/domain/entities/model/register_model.dart';
 import '../../domain/repo/repo.dart';
 import '../remote_data/remote_data.dart';
 
